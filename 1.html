@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> ëàá ðàá 1 </title> <!èìÿ ñòðàíèöû>
+</head>
+<body>
+<form name="forma1">
+ÇÀÄÀÍÈÅ 189 <br /><br />
+Ââåäèòå íàòóðàëüíîå ÷èñëî n <input type="text" name="n" size="10" /><br /><br />
+Ââåäèòå ïîñëåäîâàòåëüíîñòè a1, ... ,an <input type="text" name="a" size="10" /><br /><br />
+! Âíèìàíèå ÷èñëà ââîäÿòñÿ ÷åðåç ïðîáåë !<br /><br />
+<input type="button" value="âû÷èñëèòü" onclick="ar()" /><br /><br />
+îòâåò<input type="text" name="res" size="20" value="" /> <br /><br />
+</form>
+<script>
+function ar ()
+{
+var n = parseInt(document.forma1.n.value);
+arr = document.forma1.a.value.split(' ');
+for(var i=0;i<arr.length;i++)
+{
+if((arr[i]>=1)&&(arr[i]<=2))
+{
+arr[i]=parseFloat(arr[i]);
+}
+else if (i>0)
+{
+arr[i]=1;
+}
+} 
+document.forma1.res.value = arr;
+}
+
+</script>
+</body>
+</html>
